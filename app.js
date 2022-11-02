@@ -7,7 +7,7 @@ const path= require('path');
 
 
 //Definir onde esta os arquivos do sistema
-app.set("views", path.join(__dirname,'public'));
+app.use(express.static(path.join(__dirname,'public')));
 app.set('views engine', 'ejs'); 
 
 

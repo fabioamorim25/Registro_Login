@@ -7,4 +7,5 @@ const viewLogin = async (req,res)=>{
     }
 }
 
+
 module.exports = {viewLogin};
