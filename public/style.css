@@ -1,3 +1,78 @@
-.cor{
-    background-color: aquamarine;
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    display: flex;
+}
+.containerInscrever{
+    display: flex;
+    background-color: hsl(353, 92%, 29%);
+    width: 30%;
+    align-items: center;
+}
+.textInscrever{
+    margin: auto;
+    font-weight:bold;
+    font-size: 25px;
+}
+hr{
+  border-color: rgb(218, 238, 231);
+}
+/* SETA */
+.seta{
+    background-color: rgb(161, 226, 203);    
+    border-radius: 360%;
+    padding: 10px;
+    font-size: 25px;
+    font-weight:bold;
+}
+/* FORMULARIO DE LOGIN */
+.card{
+    background-color: rgb(218, 238, 231);
+    padding-bottom: 17%;
+    width:70%;
+    padding-top: 6em;
+}
+.formLogin{
+   display:grid;
+   padding: 18px;
+   margin-left: 5em;
+}
+label{
+    font-weight:bold;
+    font-size:large;
+    padding: 10px;
+    color: rgb(123, 10, 40);
+}
+input{
+   padding: 10px;
+   
+   border: hidden;
+   border-bottom: 1px solid rgb(123, 10, 40);
+   border-radius: 10px;
+   color: rgb(123, 10, 40);
+
+   width: 20em;
+   margin-bottom: 2px;
+}
+.text{
+    margin: 8px;
+    color: rgb(123, 10, 40);
+}
+a{
+    color: rgb(123, 10, 40);  
+}
+.btnEntrar{
+   padding: 15px;
+   max-width: 6em;
+   color: aliceblue;
+   background-color: rgb(123, 10, 40);
+   border: hidden;
+   border-radius: 5px;
+   margin-top: 5px;
+}.btnEntrar:hover{
+    background-color: rgba(123, 10, 40, 0.89);
+    color: rgba(0, 0, 0, 0.561);
 }
