@@ -4,9 +4,7 @@ const router= express.Router();
 
 //ROTAS DOS TEMPLETES (API)
 router.get('/',functionalities.viewLogin);
-
-
-
+router.get('/register',functionalities.viewRegister);
 
 
 
