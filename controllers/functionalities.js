@@ -14,6 +14,14 @@ const viewRegister = async (req,res)=>{
         res.status(404).send(error);
     }
 }
+//Funcionalidade: Mostra a tela de registro
+const all = async (req,res)=>{
+    try { 
+        res.render('all.ejs');
+    } catch (error) {
+        res.status(404).send(error);
+    }
+}
 
 
-module.exports = {viewLogin,viewRegister};
+module.exports = {viewLogin,viewRegister,all};
