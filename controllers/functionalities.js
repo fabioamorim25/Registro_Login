@@ -1,7 +1,7 @@
 //Funcionalidade: Mostra a tela de login
 const viewLogin = async (req,res)=>{
     try { 
-        res.render('viewLogin.ejs');
+        res.send("página de login");
     } catch (error) {
         res.status(404).send(error);
     }
@@ -9,7 +9,7 @@ const viewLogin = async (req,res)=>{
 //Funcionalidade: Mostra a tela de registro
 const viewRegister = async (req,res)=>{
     try { 
-        res.render('viewRegister.ejs');
+        res.send("página de registro");
     } catch (error) {
         res.status(404).send(error);
     }
@@ -17,7 +17,7 @@ const viewRegister = async (req,res)=>{
 //Funcionalidade: Mostra a tela de registro
 const all = async (req,res)=>{
     try { 
-        res.render('all.ejs');
+        res.send("página home");
     } catch (error) {
         res.status(404).send(error);
     }

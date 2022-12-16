@@ -20,7 +20,7 @@ db.once("open", ()=>{
 
 //Definir onde esta os arquivos do sistema
 app.use(express.static(path.join(__dirname,'public')));
-app.set('views engine', 'ejs'); 
+
 
 
 
