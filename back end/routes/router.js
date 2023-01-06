@@ -1,16 +1,17 @@
 const functionalities = require('../controllers/functionalities');
+const userController = require('../controllers/userController')
 const express= require('express');
 const router= express.Router();
 
-//ROTAS DOS TEMPLETES (API)
+//ROTAS DAS PAGES
 router.get('/',functionalities.viewHome);
 router.get('/login',functionalities.viewLogin);
 router.get('/register',functionalities.viewRegister);
 router.get('/all',functionalities.viewAll);
 
 
-//R0TAS DA API Rest
-
+//R0TAS POSG DA API Rest
+router.post('/login',userController.login);
 
 
 
