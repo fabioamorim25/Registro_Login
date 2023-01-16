@@ -4,7 +4,7 @@
   "description": "Sistema de registro e login. Para ter acesso a um sistemas web",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon src/server.js"
   },
   "author": "Fábio Amorim",
   "license": "ISC",
