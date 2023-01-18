@@ -1,7 +1,7 @@
 const dotenv = require('dotenv').config();
 const app = require('./app');
 
-
+const mongoose = require('./database/index')
 
 
 
