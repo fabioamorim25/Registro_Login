@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express()
+const app = express();
 
 //pagina das rotas
 const router = require('./routes/router');
