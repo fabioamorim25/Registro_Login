@@ -1,10 +1,15 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express();
 
-//pagina das rotas
-const router = require('./routes/router');
+const router = require('./routes/router');//pagina das rotas
 
 
+
+//conseguir compreender dados em json nas requisições 
+app.use(bodyParser.json());
+//conseguir interpretar dados vindos da url da requisição
+app.use(bodyParser.urlencoded({extended:false}))
 
 
 
