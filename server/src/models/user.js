@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-
+const mongoose = require('../database/index');
+const bcrypt = require('bcryptjs');
 
 
 //Estrutura do documento relacionado ao usuário
@@ -24,11 +24,23 @@ const UserSchema = new mongoose.Schema({
         default: Date.now,
     },
     userAdm:{
-        default: false,
+        default: false
     }
 });
 
-const User = mongoose.model('User', UserSchema); 
+
+
+//ANTES DE SALVAR OS DADOS NO SISTEMA A SENHA SERA CRIPTOGRAFADA
+UserSchema.pre('save', async function(next){
+    //criptografar a senha digitada
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash;
+
+    next()
+})
+
+
+const User = mongoose.model('User', UserSchema);
 
 
 module.exports = User;
