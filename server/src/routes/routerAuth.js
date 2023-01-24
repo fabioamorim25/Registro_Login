@@ -8,7 +8,7 @@ const router= express.Router();
 
 //R0TAS POST DA API Rest
 router.post('/register',authController.Register);
-
+router.post('/authenticate',authController.Login);
 
 
 
