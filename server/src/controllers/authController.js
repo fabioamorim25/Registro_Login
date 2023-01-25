@@ -1,5 +1,7 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 
 
 
@@ -33,15 +35,28 @@ const Login = async (req,res)=>{
      
     //1° VERIFICAÇÃO: O usuário existe no banco
     if (!user){
-        return res.status(400).send({error: "O usuário não existe"})
+        return res.status(400).send({error: "O usuário não existe"});
     }
     //2° VERIFICAÇÃO: Comparar a senha digitada com a senha do banco 
     if(! await bcrypt.compare(password, user.password)){
-        return res.status(400).send({error:"Password invalido"})
+        return res.status(400).send({error:"Password invalido"});
     }
     user.password = undefined;//não retornar a senha
 
-    res.send({user})
+
+    //Criar um token para o usuário
+    const token = jwt.sign({id: user.id}, process.env.SECRET,{
+
+        //tempo para expirar o token: Aqui o tempo é de 1 dia (86400 segundos)
+        expiresIn: process.env.EXPIRE_TOKEN,
+
+    });
+
+
+
+
+    
+    res.send({user, token});
 }
 
 module.exports = {Register,Login}
