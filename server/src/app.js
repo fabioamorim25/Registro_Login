@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({extended:false}))//conseguir interpretar dados vi
 
 
 
-//DEFINIR AS ROTAS (da acesso a todas as rotas do arquivo routerAuth.js)
+//DEFINIR AS ROTAS
 require('./routes/routerAuth')(app) //acessar [localhost:5000/auth]
-
+require('./routes/routerPrivate')(app) //acessar [localhost:5000/allPrivate]
 
 
 
