@@ -68,7 +68,6 @@ const Login = async (req,res)=>{
     } catch (error) {
         return res.status(400).send({error: 'Falha no login'})
     }
-    
 }
 
 module.exports = {Register,Login}
