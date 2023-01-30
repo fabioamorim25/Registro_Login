@@ -19,6 +19,7 @@
 - Os dados são criptografados e validados utilizando o bcrypt e o jwt. 
 - A API Rest possui uma proteção das rotas pelo back end
 - Para o armazenamento dos dados é mongodb
+- Enviar um token para o email do usuário. Para quando for preciso recuperar conta
 
 </div>
 
@@ -41,10 +42,10 @@
 
 ### Features 
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] Registra usuário no banco de dados 
+- [x] Logar usuário no sistema
+- [ ] Recuperar conta do usuário
+- [ ] Logout do usuário no sistema
 - [ ] 
 - [ ] 
 - [ ] 
@@ -52,14 +53,18 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o [Mongo db compass](https://www.mongodb.com/try/download/compass).
-Além disto é bom ter um editor para trabalhar com o código como [VScode](https://code.visualstudio.com/)
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o [Mongo db compass](https://www.mongodb.com/try/download/compass). Para receber as mensagem de teste para recuperação da conta, sera usado [Mailtrap](https://mailtrap.io/). Além disto é bom ter um editor para trabalhar com o código como [VScode](https://code.visualstudio.com/)
 
-### ⚙️ Rodando o sistema
+Obs: Para testa apenas o back end do repositorio. Pode ser usado o [Insomnia](https://insomnia.rest/download) 
+
+### ⚙️ Rodando o sistema back end
 
 ```bash
 #Acesse a pasta do projeto no terminal/cmd
 $ cd Registro_Login
+
+#Acesse a pasta do servidor no terminal/cmd
+$ cd server
 
 # Instale as deprendências
 $ npm install
@@ -67,7 +72,7 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
 
-#O servidor iniciará na porta:3000 - acesse <http://localhost:3000>
+#O servidor iniciará na porta:5000 - acesse <http://localhost:5000>
 ```
 
 ### 🛠️Tecnologias_framework
