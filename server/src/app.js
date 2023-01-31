@@ -13,10 +13,6 @@ app.use(bodyParser.urlencoded({extended:false}))//conseguir interpretar dados vi
 
 
 //DEFINIR AS ROTAS
-// require('./app/routes/routerAuth')(app) //acessar [localhost:5000/auth]
-// require('./app/routes/routerPrivate')(app) //acessar [localhost:5000/allPrivate]
-
-
 require('../src/app/routes/index')(app);
 
 

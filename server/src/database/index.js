@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+mongoose.set('strictQuery', false);
 
 //Conectar com o banco de dados
 mongoose.connect(process.env.MONGO_CONNECTION_URL,
@@ -16,7 +17,7 @@ db.on("error", ()=>{
     console.log(error)
 })
 db.once("open", ()=>{
-    console.log("banco de dados carregado")
+    console.log("Banco de dados carregado")
 })
 
 

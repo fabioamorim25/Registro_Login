@@ -70,4 +70,9 @@ const Login = async (req,res)=>{
     }
 }
 
-module.exports = {Register,Login}
+
+const ForgotPassword = async(req,res)=>{
+
+}
+
+module.exports = {Register,Login,ForgotPassword}

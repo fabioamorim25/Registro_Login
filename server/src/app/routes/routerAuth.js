@@ -5,10 +5,12 @@ const router= express.Router();
 
 
 
-//R0TAS POST DA API Rest
+//R0TAS POST DA API Rest (login e registro)
 router.post('/register',authController.Register);
 router.post('/authenticate',authController.Login);
 
+//ROTAS DA API Rest (recuperar senha)
+router.post('/forgot_password',authController.ForgotPassword)
 
 
 
@@ -16,6 +18,5 @@ router.post('/authenticate',authController.Login);
 
 
 module.exports = (app)=>{   
-    //DEFINIR UM ENDEREÇO PARA ESSE O ARQUIVO (routerAuth.js) definindo como (/auth). exemplo:[localhost:5000/auth/register] 
     app.use('/auth', router);
 } 
