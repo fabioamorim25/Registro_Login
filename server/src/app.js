@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-
+const transport = require('./services/mailtrap/transport');
 
 
 app.use(bodyParser.json());//conseguir compreender dados em json nas requisições 

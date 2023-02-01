@@ -21,3 +21,4 @@ router.get('/all',privateController.All);
 module.exports = (app)=>{
     app.use('/allPrivate', router);
 }
+
