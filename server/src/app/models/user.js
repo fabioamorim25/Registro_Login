@@ -20,12 +20,12 @@ const UserSchema = new mongoose.Schema({
         select: false,
     },
     passwordResetToken:{
-        type: String,//formato de string
-        select: false,//não sera mostrado nos resultados
+        type: String,
+        select: false,
     },
     passwordResetExpires:{
-        type: Date,//formato de string
-        select: false,//não sera mostrado nos resultados
+        type: Date,
+        select: false,
     },
     createdDate:{
         type: Date,
