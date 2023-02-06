@@ -1,6 +1,3 @@
-
-
-
 const All = async(req,res)=>{
     
     res.send({

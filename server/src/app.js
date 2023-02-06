@@ -4,8 +4,8 @@ const app = express();
 const transport = require('./services/mailtrap/transport');
 
 
-app.use(bodyParser.json());//conseguir compreender dados em json nas requisições 
-app.use(bodyParser.urlencoded({extended:false}))//conseguir interpretar dados vindos da url da requisição
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}))
 
 
 

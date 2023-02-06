@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const mail = require('../../../config/mail.json');
+const mail = require('../../../config/mail.json');//valor para as chaves do transport
 
 //CONFIGURAR O TRANSPORTER
 const transport = nodemailer.createTransport({
