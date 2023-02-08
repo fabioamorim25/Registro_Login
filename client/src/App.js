@@ -1,12 +1,18 @@
 import React from 'react';
 import LoginPage from './pages/Login';
-import RegisterPage from './pages/Register';
+//import RegisterPage from './pages/Register';
+//import ResetPassword from './pages/ResetPassword';
+
 
 function App() {
   return (
     <div>
-      <LoginPage />
-      <RegisterPage />
+      
+      <LoginPage/>
+
+
+      {/* <RegisterPage /> */}
+      {/* <ResetPassword/> */}
     </div>
   );
 }
