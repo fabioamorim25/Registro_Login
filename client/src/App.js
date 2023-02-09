@@ -1,19 +1,14 @@
 import React from 'react';
-import LoginPage from './pages/Login';
-//import RegisterPage from './pages/Register';
-//import ResetPassword from './pages/ResetPassword';
+import {BrowserRouter as Router} from 'react-router-dom'
 
+//importar as rotas das paginas
+import AppRoutes from './routes/router';
 
 function App() {
   return (
-    <div>
-      
-      <LoginPage/>
-
-
-      {/* <RegisterPage /> */}
-      {/* <ResetPassword/> */}
-    </div>
+    <Router>
+      <AppRoutes/>
+    </Router>
   );
 }
 
