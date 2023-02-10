@@ -5,7 +5,7 @@ import {Route,Routes} from "react-router-dom";
 import Login from "../pages/Login/index";
 import Register from  '../pages/Register/index';
 import ResetPassword from '../pages/ResetPassword/index';
-import Home from '../pages/Home/index'
+import Home from '../pages/Home/index';
 
 function AppRoutes (){
     return(

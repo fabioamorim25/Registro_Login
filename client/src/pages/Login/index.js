@@ -32,8 +32,8 @@ function LoginPage() {
             </form>
 
             <footer>
-                <a href='/'>Esqueceu sua senha?</a>
-                <a href='/'>Não possui conta? Crie uma agora</a>
+                <a href='/resetPassword'>Esqueceu sua senha?</a>
+                <a href='/register'>Não possui conta? Crie uma agora</a>
             </footer>
         </div>
     )
