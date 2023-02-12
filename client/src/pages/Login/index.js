@@ -1,17 +1,19 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
 
-
+//chamar o contexto
+import { AuthContext } from '../../contexts/auth';
 
 function LoginPage() {
+    const {login} = useContext(AuthContext)
 
     //receber os valores do email e senha do usuário
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     //pegar a ação do botão enviar
-    function actionSubmit(event) {
+    function actionSubmit(event){
         event.preventDefault();
-        console.log({ email, password });
+        login(email,password)
     }
 
     return (

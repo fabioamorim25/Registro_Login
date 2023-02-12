@@ -1,9 +1,11 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
 
-
+import { AuthContext } from "../../contexts/auth";
 
 function RegisterPage() {
-  
+  const{register} = useContext(AuthContext);
+
+
   //receber os valores do email e senha do usuário
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,7 +13,7 @@ function RegisterPage() {
   
   function actionSave (event){
     event.preventDefault();
-    console.log({name,email,password})
+    register(name,email,password)
   }
   
   

@@ -29,7 +29,7 @@ export function AuthProvider(props){
 
 
     return(
-        <AuthContext.Provider value={{user, login, logout, resetPassword,register}}>
+        <AuthContext.Provider value={{authenticated: !!user, user, login, logout, resetPassword,register}}>
             {props.children}
         </AuthContext.Provider>
     )

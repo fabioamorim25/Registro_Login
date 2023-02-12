@@ -1,16 +1,21 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
+
+import { AuthContext } from "../../contexts/auth";
 
 function ResetPassword() {
+    const {resetPassword}= useContext(AuthContext)
+
 
     //receber os valores do email e senha do usuário
     const [email, setEmail] = useState("");
 
-
     //pegar a ação do botão enviar
     function actionReset(event) {
         event.preventDefault();
-        console.log({email});
+        resetPassword(email);
     }
+
+
 
     return (
         <div >
