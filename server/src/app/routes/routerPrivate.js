@@ -10,8 +10,7 @@ router.use(authMiddoware);
 
 //ROTAS PRIVADAS 
 router.get('/all',privateController.All);
-
-
+router.post('/setUserFrontBack',privateController.SetUserFrontBack);
 
 
 

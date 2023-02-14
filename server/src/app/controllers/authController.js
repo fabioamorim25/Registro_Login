@@ -7,9 +7,11 @@ const crypto = require('crypto');//gera um token
 const {sendMessage,messageConfirme} = require('../../services/mailtrap/sendMessage');
 
 
-//Criar e retornar um token para o registro ou login 
+
 function generateToken(params={}){
+    //Criar e retornar um token para o registro ou login 
     return jwt.sign(params , process.env.SECRET,{
+        //tempo para expirar o token: Aqui o tempo é de 1 dia (86400 segundos)
         expiresIn: process.env.EXPIRE_TOKEN,
     });
 }

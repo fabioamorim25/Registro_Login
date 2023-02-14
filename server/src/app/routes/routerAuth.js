@@ -18,5 +18,6 @@ router.post('/reset_password',authController.ResetPassword)
  
 
 module.exports = (app)=>{   
+    //DEFINIR UM ENDEREÇO PARA ESSE O ARQUIVO (routerAuth.js) definindo como (/auth). exemplo:[localhost:5000/auth/register] 
     app.use('/auth', router);
 } 
