@@ -14,6 +14,8 @@ export function AuthProvider(props){
 
 
     //[LOGIN,LOGOUT,REGISTER,RESETPASSWORD]
+    const isAuthenticated = !!user;
+    
     function login (email,password){
         SetUser ({id:123,email,password})
         console.log("login",{email,password})
@@ -40,7 +42,7 @@ export function AuthProvider(props){
 
 
     return(
-        <AuthContext.Provider value={{authenticated: !!user, user, login, logout, resetPassword,register}}>
+        <AuthContext.Provider value={{isAuthenticated,user, login, logout, resetPassword,register}}>
             {props.children}
         </AuthContext.Provider>
     )

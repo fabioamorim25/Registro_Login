@@ -1,4 +1,5 @@
 import React,{useContext, useState} from 'react';
+import { Link } from 'react-router-dom';
 
 //chamar o contexto
 import { AuthContext } from '../../contexts/auth';
@@ -34,8 +35,8 @@ function LoginPage() {
             </form>
 
             <footer>
-                <a href='/resetPassword'>Esqueceu sua senha?</a>
-                <a href='/register'>Não possui conta? Crie uma agora</a>
+                <Link to={'/resetPassword'}>Esqueceu sua senha?</Link>
+                <Link to={'/register'}>Não possui conta? Crie uma agora</Link>
             </footer>
         </div>
     )
