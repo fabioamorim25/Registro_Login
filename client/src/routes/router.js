@@ -14,11 +14,9 @@ function AppRoutes (){
     const navigate = useNavigate();
 
     function PrivateRoute ({children}){
-        const {isAuthenticated} = useContext(AuthContext)
-        
+        const {isAuthenticated} = useContext(AuthContext)        
         if(!isAuthenticated)
             return(navigate('/login'))
-        
         return children
     }
 

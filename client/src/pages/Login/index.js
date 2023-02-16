@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/auth';
 
 function LoginPage() {
-    const {login} = useContext(AuthContext)
+    const {signIn} = useContext(AuthContext)
 
     //receber os valores do email e senha do usuário
     const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ function LoginPage() {
     //pegar a ação do botão enviar
     function actionSubmit(event){
         event.preventDefault();
-        login(email,password)
+        signIn(email,password)
     }
 
     return (
