@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import {createSession,validateSession} from "../services/api";
+import {createSession,validateSession,registerUser} from "../services/api";
 
 
 
@@ -19,31 +19,43 @@ export function AuthProvider(props) {
     const isAuthenticated = !!user;
 
 
-    useEffect(()=>{
-        const fetchUser = async()=>{
-            const token =localStorage.getItem('loginRegister.token');
-            if(token){
-                const {data} = await validateSession({token}); 
+    useEffect(() => {
+        const fetchUser = async () => {
+            const token = localStorage.getItem('loginRegister.token');
+            if (token) {
+                const { data } = await validateSession({ token });
                 setUser(JSON.stringify(data));
             }
         }
         fetchUser()
-    },[])
+    }, [])
 
-
-
-     const signIn = async (email, password)=> {
+    const signIn = async (email, password)=> {
         //chamar a api
         const { data } = await createSession({
             email,
             password
         })
-        
+    
         if(data.token && data.user){    
             setUser(JSON.stringify(data.user))
             localStorage.setItem('loginRegister.token', data.token)
         }
+        navigate('/home')
+    }
 
+    const register = async (name, email, password) => {
+        //chamar a api
+        const { data } = await registerUser({
+            name,
+            email,
+            password
+        })
+
+        if (data.token && data.user) {
+            setUser(JSON.stringify(data.user))
+            localStorage.setItem('loginRegister.token', data.token)
+        }
         navigate('/home')
     }
 
@@ -51,7 +63,7 @@ export function AuthProvider(props) {
 
 
 return (
-        <AuthContext.Provider value={{ isAuthenticated, user, signIn }}>
+        <AuthContext.Provider value={{ isAuthenticated, user, signIn,register }}>
             {props.children}
         </AuthContext.Provider>
     )

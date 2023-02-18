@@ -26,3 +26,12 @@ export const validateSession= async ({token}) => {
         console.log(error)
     }
 }
+
+export const registerUser= async ({ name,email, password }) => {
+    try { 
+       const dataUser = api.post('/auth/register', { name,email, password })
+       return dataUser
+    } catch (error) {
+        console.log(error)
+    }
+}
