@@ -46,14 +46,14 @@
 
 ### Features 
 
-- [ ] Registra usuário no banco de dados
-- [x] Logar usuário no sistema
-- [x] Bloquear rotas privadas
-- [ ] Recuperar conta do usuário
-- [ ] Logout do usuário no sistema
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] Registra usuário 
+- [x] LogIn usuário
+- [x] Esqueceu a senha
+- [x] Armazenar token
+- [x] Manter o usuário autenticação com o back end (user)
+- [ ] Recuperar conta
+- [ ] LogOut
+- [ ] Autenticação com o Google
 
 ### Ilustração
 
@@ -83,13 +83,18 @@ $ cd Registro_Login
 $ cd server
 # Instale as deprendências
 $ npm install
+#Ir no arquivo [server/config/mail.json] e colocar os valores do seu mailtrap [Host, Port, User, Pass].
+
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
 #O servidor iniciará na porta:5000 - acesse <http://localhost:5000>
 
 
+
 #Retornar para pasta raiz Registro_Login
 $ cd ..
+
+
 
   #INSTALAR FRONT END
 
@@ -99,7 +104,7 @@ $ cd client
 $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
-#O cliente iniciará na porta:3000 - acesse <http://localhost:3000>
+#O cliente iniciará na porta:3000 - acesse <http://localhost:3000/login>
 ```
 
 ### 🛠️Tecnologias_framework
@@ -114,8 +119,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [Express js](https://expressjs.com/pt-br/)
 - [Mongo db](https://www.mongodb.com/pt-br/what-is-mongodb)
-- [mongoose](https://mongoosejs.com/)
-
+- [Mongoose](https://mongoosejs.com/)
+- [Nodemailer](https://nodemailer.com/about/)
 
 
 ### Autor

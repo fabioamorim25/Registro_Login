@@ -41,13 +41,16 @@
 
 ### Features 
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] Registra usuário 
+- [x] LogIn usuário no sistema
+- [x] Esqueceu a senha
+- [x] Armazenar token
+- [x] Manter o usuário autenticação com o back end (user)
+- [ ] Recuperar conta
+- [ ] LogOut
+- [ ] Autenticação com o Google
+
+
 
 ### Ilustração
 
@@ -59,7 +62,7 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o [Mongo db compass](https://www.mongodb.com/try/download/compass).
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 Além disto é bom ter um editor para trabalhar com o código como [VScode](https://code.visualstudio.com/)
 
 ### ⚙️ Rodando o sistema
@@ -83,6 +86,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### Front end
 - [React.js](https://pt-br.reactjs.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
 
 
 ### Autor

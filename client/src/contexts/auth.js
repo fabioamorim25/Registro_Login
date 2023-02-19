@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import {createSession,validateSession,registerUser} from "../services/api";
+import {createSession, validateSession, registerUser, dataForgotPassword} from "../services/api";
 
 
 
@@ -59,11 +59,23 @@ export function AuthProvider(props) {
         navigate('/home')
     }
 
+    const forgotPassword = async (email) => {
+        //chamar a api
+        const { data } = await dataForgotPassword({
+            email
+        })
+        setUser(JSON.stringify(data))
+        setTimeout(()=>{
+            navigate('/login')
+        }, 5000)
+        
+    }    
+
     //-----------------------------------------------
 
 
-return (
-        <AuthContext.Provider value={{ isAuthenticated, user, signIn,register }}>
+    return (
+        <AuthContext.Provider value={{isAuthenticated, user, signIn, register, forgotPassword}}>
             {props.children}
         </AuthContext.Provider>
     )

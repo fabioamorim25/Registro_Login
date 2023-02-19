@@ -44,11 +44,10 @@
 
 - [x] Registra usuário no banco de dados 
 - [x] Logar usuário no sistema
-- [ ] Recuperar conta do usuário
-- [ ] Logout do usuário no sistema
+- [x] Recuperar conta do usuário
 - [ ] 
 - [ ] 
-- [ ] 
+
 
 ### Pré-requisitos
 
@@ -61,17 +60,14 @@ Obs: Para testa apenas o back end do repositorio. Pode ser usado o [Insomnia](ht
 
 ```bash
 #Acesse a pasta do projeto no terminal/cmd
-$ cd Registro_Login
-
-#Acesse a pasta do servidor no terminal/cmd
 $ cd server
-
 # Instale as deprendências
 $ npm install
 
+#Ir no arquivo [server/config/mail.json] e colocar os valores do seu mailtrap [Host, Port, User, Pass].
+
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
-
 #O servidor iniciará na porta:5000 - acesse <http://localhost:5000>
 ```
 
@@ -83,7 +79,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [Express js](https://expressjs.com/pt-br/)
 - [Mongo db](https://www.mongodb.com/pt-br/what-is-mongodb)
-- [mongoose](https://mongoosejs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Nodemailer](https://nodemailer.com/about/)
 
 
 

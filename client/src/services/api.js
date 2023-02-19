@@ -3,8 +3,8 @@ import axios from "axios";
 
 
 export const api = axios.create({
-    baseURL:'http://10.0.0.104:5000'
-    //baseURL:'http://localhost:5000'
+    //baseURL:'http://10.0.0.104:5000'
+    baseURL:'http://localhost:5000'
 });
 
 
@@ -30,6 +30,15 @@ export const validateSession= async ({token}) => {
 export const registerUser= async ({ name,email, password }) => {
     try { 
        const dataUser = api.post('/auth/register', { name,email, password })
+       return dataUser
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const dataForgotPassword= async ({ email}) => {
+    try { 
+       const dataUser = api.post('/auth/forgot_password', { email })
        return dataUser
     } catch (error) {
         console.log(error)
