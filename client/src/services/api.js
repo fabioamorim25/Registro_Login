@@ -44,3 +44,12 @@ export const dataForgotPassword= async ({ email}) => {
         console.log(error)
     }
 }
+
+export const resetPasswordUser= async ({ email,token, password}) => {
+    try { 
+       const dataUser = api.post('/auth/reset_password', { email,token, password})
+       return dataUser
+    } catch (error) {
+        console.log(error)
+    }
+}

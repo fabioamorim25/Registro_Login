@@ -1,11 +1,11 @@
 import React,{useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 
-//chamar o contexto
-import { AuthContext } from '../../contexts/auth';
+import { AuthContext } from '../../contexts/auth';//chamar o contexto
+
 
 function LoginPage() {
-    const {signIn} = useContext(AuthContext)
+    const {signIn,user} = useContext(AuthContext)
 
     //receber os valores do email e senha do usuário
     const [email, setEmail] = useState("");
@@ -19,11 +19,11 @@ function LoginPage() {
 
     return (
         <div >
+            <h1>{user}</h1>
             <header>
                 <h2>AmorimPg</h2>
                 <h4>faça login e comece a usar</h4>
             </header>
-
             <form onSubmit={actionSubmit}>
                 <input type='email' value={email}  placeholder="Digite seu E-mail" 
                 onChange={(event) => setEmail(event.target.value)}></input>
@@ -33,9 +33,8 @@ function LoginPage() {
 
                 <button type='submit'>Entrar</button>
             </form>
-
             <footer>
-                <Link to={'/resetPassword'}>Esqueceu sua senha?</Link>
+                <Link to={'/forgotPassword'}>Esqueceu sua senha?</Link>
                 <Link to={'/register'}>Não possui conta? Crie uma agora</Link>
             </footer>
         </div>

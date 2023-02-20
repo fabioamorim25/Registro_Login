@@ -1,38 +1,42 @@
-import React,{useContext, useState} from "react";
+import React, { useContext,useState } from "react";
 
 import { AuthContext } from "../../contexts/auth";
 
 function ResetPassword() {
-    const {resetPassword}= useContext(AuthContext)
+
+  const { resetPassword,user} = useContext(AuthContext)
+
+  const [email, setEmail] = useState("");
+  const [token, setToken] = useState("");
+  const [password, setPassword] = useState("");
 
 
-    //receber os valores do email e senha do usuário
-    const [email, setEmail] = useState("");
-
-    //pegar a ação do botão enviar
-    function actionReset(event) {
-        event.preventDefault();
-        resetPassword(email);
-    }
+  function actionReset(event) {
+    event.preventDefault();
+    resetPassword(email,token,password)
+  }
 
 
+  return (
+    <div>
+      <h1>{user}</h1>
+      <form onSubmit={actionReset}>
+        <input type='email' value={email} placeholder="Digite seu E-mail"
+          onChange={(event) => setEmail(event.target.value)}>
+        </input>
 
-    return (
-        <div >
-            <header>
-                <h2>AmorimPg</h2>
-                <h4>Redefinir sua conta aqui</h4>
-            </header>
+        <input type='text' value={token} placeholder="Digite o Token do Email"
+          onChange={(event) => setToken(event.target.value)}>
+        </input>
 
-            <form onSubmit={actionReset}>
-                <input type='email' value={email} placeholder="Digite seu E-mail"
-                    onChange={(event) => setEmail(event.target.value)}></input>
+        <input type='password' value={password} placeholder="Digite sua nova Senha"
+          onChange={(event) => setPassword(event.target.value)}>
+        </input>
 
-                <button type='submit'>Enviar</button>
-            </form>
-        </div>
-    )
-
+        <button type='submit'>Resetar</button>
+      </form>
+    </div>
+  )
 }
 
 export default ResetPassword;

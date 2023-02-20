@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import {createSession, validateSession, registerUser, dataForgotPassword} from "../services/api";
+import {createSession, validateSession, registerUser, dataForgotPassword,resetPasswordUser} from "../services/api";
 
 
 
@@ -40,7 +40,8 @@ export function AuthProvider(props) {
         if(data.token && data.user){    
             setUser(JSON.stringify(data.user))
             localStorage.setItem('loginRegister.token', data.token)
-        }
+        }           
+       
         navigate('/home')
     }
 
@@ -65,17 +66,29 @@ export function AuthProvider(props) {
             email
         })
         setUser(JSON.stringify(data))
-        setTimeout(()=>{
-            navigate('/login')
-        }, 5000)
-        
+        navigate('/login')        
     }    
-
+   
+    const resetPassword = async (email, token, password) => {
+        try {
+            const {data} =await resetPasswordUser({
+                email,
+                token,
+                password
+            })
+            setUser(JSON.stringify(data))
+            navigate('/login')
+                       
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     //-----------------------------------------------
 
 
     return (
-        <AuthContext.Provider value={{isAuthenticated, user, signIn, register, forgotPassword}}>
+        <AuthContext.Provider value={{isAuthenticated, user, signIn, register, forgotPassword, resetPassword}}>
             {props.children}
         </AuthContext.Provider>
     )
