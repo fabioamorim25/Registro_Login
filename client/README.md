@@ -46,7 +46,7 @@
 - [x] Esqueceu a senha
 - [x] Armazenar token
 - [x] Manter o usuário autenticação com o back end (user)
-- [ ] Recuperar conta
+- [x] Recuperar conta
 - [ ] LogOut
 - [ ] Autenticação com o Google
 
