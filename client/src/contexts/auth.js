@@ -18,7 +18,6 @@ export function AuthProvider(props) {
     //----------------------------------------------
     const isAuthenticated = !!user;
 
-
     useEffect(() => {
         const fetchUser = async () => {
             const token = localStorage.getItem('loginRegister.token');
@@ -84,11 +83,16 @@ export function AuthProvider(props) {
             console.log(error)
         }
     }
+    const Logout = async()=>{
+       setUser(null)
+       localStorage.removeItem('loginRegister.token')
+       navigate('/login')
+    }
     //-----------------------------------------------
 
 
     return (
-        <AuthContext.Provider value={{isAuthenticated, user, signIn, register, forgotPassword, resetPassword}}>
+        <AuthContext.Provider value={{isAuthenticated, user, signIn, register, forgotPassword, resetPassword,Logout}}>
             {props.children}
         </AuthContext.Provider>
     )

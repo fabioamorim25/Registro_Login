@@ -3,9 +3,17 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
 
 function Home (){
-    const {user}= useContext(AuthContext)
+    const {user,Logout}= useContext(AuthContext)
+
+    function LogoutUser(){
+        Logout()
+    }
+
     return(
-        <div>{user}</div>
+        <div>
+            <button onClick={()=>LogoutUser()}>Logout</button>
+            <div>{user}</div>
+        </div>
     )
 }
 export default Home;
