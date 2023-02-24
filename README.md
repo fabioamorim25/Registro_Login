@@ -52,7 +52,7 @@
 - [x] Armazenar token
 - [x] Manter o usuário autenticação com o back end (user)
 - [x] Recuperar conta
-- [ ] LogOut
+- [x] LogOut
 - [ ] Autenticação com o Google
 
 ### Ilustração
