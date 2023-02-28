@@ -58,7 +58,7 @@
 ### Ilustração
 
 <div align= "center">
-  <img title="imagem da tela de login" src ="./github/login_page.png"/>
+  <img title="imagem da tela de login" src ="./github/logIn_page.jpg"/>
   <img style="max-width:300px;" title="" src ="./github"/>
   
   <div>
