@@ -1,9 +1,5 @@
 # Registro_Login (front end)
 
-### Sobre
-
-<p align="center"> O sistema tem o intuito de registra um usuário ao acessar uma interface do sistema e armazenar os dados. Assim, quando o usuário for fazer o login no sistema, sera possível acessar toda aplicação </p>
-
 
 <hr>
 <h4 align = "center">
@@ -15,9 +11,17 @@
 
 <div>
 
-- No front end o sistema utiliza o react.js para dá estilo as paginas 
-- Para a proteger as rotas pelo front end, navegar entre as páginas é utilizado o react-router-dom. 
-- O front end interpreta os dados recebidos da API Rest 
+- No front end o sistema utiliza o react.js. Aonde para navegar entre as páginas é utilizado o react-router-dom 
+
+- O front end possui 5 paginas. Onde, três dessas paginas são publicas e duas privadas. São ela: (PRIVADAS: home, resetPassword; PUBLICAS: login, register, forgotPassword)
+
+- O front end utiliza o axios para fazer as requisições ao back end e esperar a resposta
+
+- No navegador do cliente sera armazenado apenas o token do usuário (localStorage) 
+
+- Para ter acesso à página privada o front end precisa enviar os dados o usuário
+
+- PROTEÇÃO: manter o usuário logado no sistema. Sera enviar o token do usuário para o back end. Onde o servidor vai validar o token e depois responde com os dados não sensíveis do usuário (name, email e createdDate). Esses dados serão usados para mantendo o usuário autenticado. Assim, toda vez que a tela for atualizada, sera enviado o token para o servidor. Caso o token seja invalido, o usuário é redirecionado para fora do sistema. (para fazer isso foi utilizado o useEffect)
 
 </div>
 
@@ -55,7 +59,7 @@
 ### Ilustração
 
 <h1 align= "center">
-  <img title="" src ="./github/"/>
+  <img title="" src ="../github/login_page.jpg"/>
   <img style="max-width:300px;" title="" src ="./github"/>
 </h1>
 
