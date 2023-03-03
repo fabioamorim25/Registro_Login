@@ -1,10 +1,5 @@
 # Registro_Login (back end)
 
-### Sobre
-
-<p align="center"> O sistema tem o intuito de registra um usuário ao acessar uma interface do sistema e armazenar os dados. Assim, quando o usuário for fazer o login no sistema, sera possível acessar toda aplicação </p>
-
-
 <hr>
 <h4 align = "center">
  👷‍♂️Projeto 🚧 Registro_Login em contrução 🚧 ...
@@ -15,12 +10,14 @@
 
 <div>
 
-- O sistema utilizar uma API Rest para fazer o envio dos dados que o front end precisar. A comunicação entre o sistema é utilizado o JSON.
-- Os dados são criptografados e validados utilizando o bcrypt e o jwt. 
-- A API Rest possui uma proteção das rotas pelo back end
-- Para o armazenamento dos dados é mongodb
-- Enviar um token para o email do usuário. Para quando for preciso recuperar conta
+- Sera usado as definições de API Restful para estruturar todo o back end
+- A estrutura dos dados é o JSON. O que vai permitir o client e server interpretar os dados.
+- Para ter acesos as rotas privadas é utilizado um middoware. Será usado para validar o token que o usuário enviou para o back end.
+- O back end possui quatro rotas publicas onde o usuário pode fazer um post para o servidor e duas rotas privadas. Onde será preciso o usuário está autenticado no sistema
 
+- No registro sera recebido os dados do usuário e armazenados no banco de dados mongoDB. Onde a senha registrada sera criptografada antes de chegar no banco de dados. Os dados são criptografados e validados utilizando o jwt e o bcrypt.
+- No login sera validado os dados recebidos do front end. Caso tudo estiver certo, sera enviado como resposta o token e alguns dados do usuário para o front end. Onde esses dados serão usados para mostra informações do usuário na tela e sera usado para autenticar o usuário no sistema toda vez que a tela for atualizada
+- Na recuperação da conta o usuário envia um email. Caso o back end encontre esse email no banco de dados sera gerado um token com validade de 1 hora. Assim, sera preparado um template de mesagem de recuperação de conta que vai conter o token gerado no back end e o link para a página para recuperar a conta. Com todos os dados do usuário atualizado sera enviado para o email do usuário um template de mensagem confirmando a recuperação da conta.
 </div>
 
 <br>
@@ -44,9 +41,8 @@
 
 - [x] Registra usuário no banco de dados 
 - [x] Logar usuário no sistema
+- [x] Autenticar o usuário no sistema (receber o token do front e enviar os dados do usuário)
 - [x] Recuperar conta do usuário
-- [ ] 
-- [ ] 
 
 
 ### Pré-requisitos

@@ -16,18 +16,30 @@
 <div>
 DESAFIOS NO BACK-END:
 
-- No back end o sistema utilizar uma API Rest para fazer o envio dos dados que o front end precisar. A comunicação entre o sistema é utilizado o JSON.
-- Os dados são criptografados e validados utilizando o bcrypt e o jwt. 
-- A API Rest possui uma proteção das rotas pelo back end
-- Para o armazenamento dos dados é mongodb
+- Sera usado as definições de API Restful para estruturar todo o back end
+
+- A estrutura dos dados é o JSON. O que vai permitir o client e server interpretar os dados.
+
+- Para ter acesos as rotas privadas é utilizado um middoware. Será usado para validar o token que o usuário enviou para o back end.
+- O back end possui quatro rotas publicas onde o usuário pode fazer um post para o servidor e duas rotas privadas. Onde será preciso o usuário está autenticado no sistema.
+
+- No registro sera recebido os dados do usuário e armazenados no banco de dados mongoDB. Onde a senha registrada sera criptografada antes de chegar no banco de dados. Os dados são criptografados e validados utilizando o jwt e o bcrypt.
+
+- No login sera validado os dados recebidos do front end. Caso tudo estiver certo, sera enviado como resposta o token e alguns dados do usuário para o front end. Onde esses dados serão usados para mostra informações do usuário na tela e sera usado para autenticar o usuário no sistema toda vez que a tela for atualizada
+
+- Na recuperação da conta o usuário envia um email. Caso o back end encontre esse email no banco de dados sera gerado um token com validade de 1 hora. Assim, sera preparado um template de mesagem de recuperação de conta que vai conter o token gerado no back end e o link para a página para recuperar a conta. Com todos os dados do usuário atualizado sera enviado para o email do usuário um template de mensagem confirmando a recuperação da conta.
 
 DESAFIOS NO FRONT END:
-- No front end o sistema utiliza o react.js. Aonde para navegar entre as páginas é utilizado o react-router-dom 
+- No front end o sistema utiliza o react.js. Aonde para navegar entre as páginas é utilizado o react-router-dom.
+
 - O front end possui 5 paginas. Onde, três dessas paginas são publicas e duas privadas. São ela: (PRIVADAS: home, resetPassword; PUBLICAS: login, register, forgotPassword)
-- O front end utiliza o axios para fazer as requisições ao back end e esperar a resposta
-- No navegador do cliente sera armazenado apenas o token do usuário (localStorage) 
-- Para ter acesso à página privada o front end precisa enviar os dados o usuário
-- PROTEÇÃO: manter o usuário logado no sistema. Sera enviar o token do usuário para o back end. Onde o servidor vai validar o token e depois responde com os dados não sensíveis do usuário (name, email e createdDate). Esses dados serão usados para mantendo o usuário autenticado. Assim, toda vez que a tela for atualizada, sera enviado o token para o servidor. Caso o token seja invalido, o usuário é redirecionado para fora do sistema. (para fazer isso foi utilizado o useEffect)
+- O front end utiliza o axios para fazer as requisições ao back end e esperar a resposta.
+
+- No navegador do cliente sera armazenado apenas o token do usuário (localStorage).
+
+- Para ter acesso à página privada o front end precisa enviar os dados o usuário.
+
+- PROTEÇÃO: manter o usuário logado no sistema. Sera enviar o token do usuário para o back end. Onde o servidor vai validar o token e depois responde com os dados não sensíveis do usuário (name, email e createdDate). Esses dados serão usados para mantendo o usuário autenticado. Assim, toda vez que a tela for atualizada, sera enviado o token para o servidor. Caso o token seja invalido, o usuário é redirecionado para fora do sistema. (para fazer isso foi utilizado o useEffect).
 
 </div>
 
