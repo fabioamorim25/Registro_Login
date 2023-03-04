@@ -24,7 +24,6 @@
 
 <hr>
   <p align="center">
-    <a href ="#sobre">Sobre</a> -
     <a href ="#desafios">Desafios</a> -
     <a href ="#features">Features</a> -
     <a href ="#pré-requisitos">Pré-requisitos</a> -
@@ -66,6 +65,25 @@ $ npm install
 $ npm start
 #O servidor iniciará na porta:5000 - acesse <http://localhost:5000>
 ```
+
+### ⚙️ Rotas do back end:
+<h3>- ACESSO PUBLICO :</h3>
+
+| Ação | Tipo de requisição | Rota | Recebe |
+|--- |--- |--- |--- |
+| Registra | POST | localhost:5000/auth/register | name, email, password |
+| LogIn | POST | localhost:5000/auth/authenticate | email, password | 
+| Forgot Password | POST | localhost:5000/auth/forgot_password | email |
+| Reset Password | POST | localhost:5000/auth/reset_password | email, token, password |
+
+<br>
+<h3>- ACESSO PRIVADO :</h3>
+
+| Ação | Tipo de requisição | Rota | Recebe |
+|--- |--- |--- |--- |
+| Autenticar usuário | POST | localhost:5000/allPrivate/setUserFrontBack | token |
+| Tela admin | GET | localhost:5000/allPrivate/all |  |
+ 
 
 ### 🛠️Tecnologias_framework
 

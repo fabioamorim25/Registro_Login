@@ -65,10 +65,12 @@ DESAFIOS NO FRONT END:
 
 - [x] Registra usuário 
 - [x] LogIn usuário
-- [x] Esqueceu a senha
-- [x] Armazenar token
+- [x] Criar e armazenr o token do usuário (front e back) 
 - [x] Manter o usuário autenticação com o back end (user)
+- [x] Esqueceu a senha
+- [x] Mensagem para o email (template para alterar senha)
 - [x] Recuperar conta
+- [x] Mensagem para o email (confirma a alteração)
 - [x] LogOut
 - [ ] Autenticação com o Google
 
@@ -78,9 +80,9 @@ DESAFIOS NO FRONT END:
   <img title="imagem da tela de login" src ="./github/logIn_page.jpg"/>
   <img style="max-width:300px;" title="" src ="./github"/>
   
-  <div>
-    <a href="https://www.figma.com/file/EvvFIBsGZcCgs1ZPj9nEmi/Untitled?t=9MO9mqwKkCKUwc1a-6">Layout do projeto no figma</a>
-  </div>
+  <a href="https://www.figma.com/file/EvvFIBsGZcCgs1ZPj9nEmi/Untitled?t=9MO9mqwKkCKUwc1a-6">
+  Clique qui para ver todo o layout do projeto no figma</a>
+  
 </div>
 
 

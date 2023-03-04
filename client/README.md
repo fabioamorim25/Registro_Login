@@ -29,7 +29,6 @@
 
 <hr>
   <p align="center">
-    <a href ="#sobre">Sobre</a> -
     <a href ="#desafios">Desafios</a> -
     <a href ="#features">Features</a> -
     <a href ="#ilustração">Ilustração</a> - 
