@@ -82,7 +82,23 @@ $ npm start
 
 #O servidor iniciará na porta:3000 - acesse <http://localhost:3000>
 ```
+### ⚙️ Rotas do Front end:
+<h3>- ACESSO PUBLICO :</h3>
 
+| Ação | Tipo de requisição | Rota |
+|--- |--- |--- |
+| Registra | GET | localhost:3000/register |
+| LogIn | GET | localhost:3000/authenticate | 
+| Forgot Password | GET | localhost:3000/forgot_password |
+| Reset Password | GET | localhost:3000/reset_password |
+
+<br>
+<h3>- ACESSO PRIVADO :</h3>
+
+| Ação | Tipo de requisição | Rota | Recebe |
+|--- |--- |--- |--- |
+| Autenticar usuário | POST | localhost:3000/allPrivate/setUserFrontBack | token |
+| Tela admin | GET | localhost:3000/all |
 ### 🛠️Tecnologias_framework
 
 As seguintes ferramentas foram usadas na construção do projeto:
