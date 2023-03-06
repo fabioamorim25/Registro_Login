@@ -31,7 +31,6 @@
   <p align="center">
     <a href ="#desafios">Desafios</a> -
     <a href ="#features">Features</a> -
-    <a href ="#ilustração">Ilustração</a> - 
     <a href ="#pré-requisitos">Pré-requisitos</a> -
     <a href ="#tecnologias_framework">Tecnologias/framework</a> -
     <a href ="#autor">Autor</a>
@@ -53,14 +52,6 @@
 - [x] LogOut
 - [ ] Autenticação com o Google
 
-
-
-### Ilustração
-
-<h1 align= "center">
-  <img title="" src ="../github/login_page.jpg"/>
-  <img style="max-width:300px;" title="" src ="./github"/>
-</h1>
 
 ### Pré-requisitos
 
