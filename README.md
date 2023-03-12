@@ -77,13 +77,13 @@ DESAFIOS NO FRONT END:
 ### Ilustração
 
 <div align= "center">
-  <img title="imagem da tela de login" src ="./github/logIn_page.jpg"/>
-  <img style="max-width:300px;" title="" src ="./github"/>
-  
-  <a href="https://www.figma.com/file/EvvFIBsGZcCgs1ZPj9nEmi/Untitled?t=9MO9mqwKkCKUwc1a-6">
+  <img title="imagem da tela de login" src ="./github/logIn_page.png"/> 
+  <img title="imagem da tela de registro" src ="./github/register_page.png"/>
+
+<a href="https://www.figma.com/file/EvvFIBsGZcCgs1ZPj9nEmi/Untitled?t=9MO9mqwKkCKUwc1a-6">
   Clique qui para ver todo o layout do projeto no figma</a>
-  
-</div>
+</div> 
+
 
 
 ### Pré-requisitos
