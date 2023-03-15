@@ -2,7 +2,7 @@ import React,{useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../../contexts/auth';//chamar o contexto
-
+import '../../index.css';
 
 function LoginPage() {
     const {signIn,user} = useContext(AuthContext)
@@ -18,12 +18,13 @@ function LoginPage() {
     }
 
     return (
-        <div >
-            <h1>{user}</h1>
+        <div className='containerFrom'>
+           <div className='fromBox'>
+           <h1>{user}</h1>
             <header>
                 <h2>AmorimPg</h2>
                 <h4>faça login e comece a usar</h4>
-            </header>
+            </header> 
             <form onSubmit={actionSubmit}>
                 <input type='email' value={email}  placeholder="Digite seu E-mail" 
                 onChange={(event) => setEmail(event.target.value)}></input>
@@ -35,8 +36,12 @@ function LoginPage() {
             </form>
             <footer>
                 <Link to={'/forgotPassword'}>Esqueceu sua senha?</Link>
-                <Link to={'/register'}>Não possui conta? Crie uma agora</Link>
+                <br/>
+                <p>Não possui conta?    
+                    <Link to={'/register'}> Crie uma agora</Link>
+                </p>
             </footer>
+           </div>
         </div>
     )
 }
