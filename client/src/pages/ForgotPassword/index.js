@@ -3,7 +3,7 @@ import React,{useContext, useState} from "react";
 import { AuthContext } from "../../contexts/auth";
 
 function ForgotPassword() {
-    const {forgotPassword, user}= useContext(AuthContext)
+    const {forgotPassword}= useContext(AuthContext)
 
 
     //receber os valores do email e senha do usuário
@@ -18,19 +18,20 @@ function ForgotPassword() {
 
 
     return (
-        <div >
-            <h1>{user}</h1>
-            <header>
-                <h2>AmorimPg</h2>
-                <h4>Redefinir sua conta aqui</h4>
-            </header>
+        <div className='containerFrom'>
+            <div className='fromBox'>
+                <header>
+                    <h2>AmorimPg</h2>
+                    <h4>Redefinir sua conta aqui</h4>
+                </header>
 
-            <form onSubmit={actionReset}>
-                <input type='email' value={email} placeholder="Digite seu E-mail"
-                    onChange={(event) => setEmail(event.target.value)}></input>
+                <form onSubmit={actionReset}>
+                    <input type='email' value={email} placeholder="Digite seu E-mail"
+                        onChange={(event) => setEmail(event.target.value)}></input>
 
-                <button type='submit'>Enviar</button>
-            </form>
+                    <button type='submit'>Enviar</button>
+                </form>
+            </div>
         </div>
     )
 
