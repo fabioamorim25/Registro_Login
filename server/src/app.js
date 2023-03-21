@@ -6,7 +6,7 @@ const cors = require('cors')
 
 //Definir a origem das requisições (permitir apenas o front end)
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: process.env.URL_CLIENT,
     credentials: true,//access-control-allow-credentials:true
     optionSuccessStatus: 200
 }
