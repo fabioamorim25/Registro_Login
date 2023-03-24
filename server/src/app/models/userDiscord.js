@@ -27,7 +27,7 @@ const UserDiscordSchema = new mongoose.Schema({
 
 
 
-const User = mongoose.model('UserDiscord', UserDiscordSchema);
+const UserDiscord = mongoose.model('UserDiscord', UserDiscordSchema);
 
 
-module.exports = UserDiscordSchema;
+module.exports = UserDiscord;

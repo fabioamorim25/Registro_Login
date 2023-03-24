@@ -9,6 +9,9 @@ const router= express.Router();
 router.post('/register',authController.Register);
 router.post('/authenticate',authController.Login);
 
+
+
+
 //ROTAS (recuperar senha)
 router.post('/forgot_password',authController.ForgotPassword)
 router.post('/reset_password',authController.ResetPassword)
