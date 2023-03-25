@@ -42,6 +42,7 @@
 - [x] Logar usuário no sistema
 - [x] Autenticar o usuário no sistema (receber o token do front e enviar os dados do usuário)
 - [x] Recuperar conta do usuário
+- [ ] Autenticação com o Discord
 
 
 ### Pré-requisitos

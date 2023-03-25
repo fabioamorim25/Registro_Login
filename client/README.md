@@ -50,7 +50,7 @@
 - [x] Manter o usuário autenticação com o back end (user)
 - [x] Recuperar conta
 - [x] LogOut
-- [ ] Autenticação com o Google
+- [ ] Autenticação com o Discord
 
 
 ### Pré-requisitos

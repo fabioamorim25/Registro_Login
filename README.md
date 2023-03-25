@@ -72,7 +72,7 @@ DESAFIOS NO FRONT END:
 - [x] Recuperar conta
 - [x] Mensagem para o email (confirma a alteração)
 - [x] LogOut
-- [ ] Autenticação com o Google
+- [ ] Autenticação com o Discord
 
 ### Ilustração
 
