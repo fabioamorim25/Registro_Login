@@ -1,4 +1,5 @@
 const authController = require('../controllers/authController');
+const authDiscord = require('../controllers/authDiscord')
 const express= require('express');
 const router= express.Router();
 
@@ -8,14 +9,13 @@ const router= express.Router();
 //R0TAS (login e registro)
 router.post('/register',authController.Register);
 router.post('/authenticate',authController.Login);
-
+router.post('/authDiscord', authDiscord.AuthDiscord);
 
 
 
 //ROTAS (recuperar senha)
 router.post('/forgot_password',authController.ForgotPassword)
 router.post('/reset_password',authController.ResetPassword)
-
 
 
  
